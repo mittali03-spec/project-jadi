@@ -402,5 +402,63 @@ portal.addEventListener("pointerleave", () => {
     portal.style.transform = "";
 });
 
+/* ------------------------------------------
+   SEND AND SAVE TRUSHNAA'S BIRTHDAY WISH
+------------------------------------------ */
+
+const wishForm = document.querySelector("#wishForm");
+const wishFeedback = document.querySelector("#wishFeedback");
+
+if (wishForm && wishFeedback) {
+    wishForm.addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        const submitButton = wishForm.querySelector(
+            'button[type="submit"]'
+        );
+
+        const originalButtonText = submitButton.innerHTML;
+
+        submitButton.disabled = true;
+        submitButton.textContent = "SENDING YOUR WISH... ✨";
+        wishFeedback.textContent = "";
+
+        const formData = new FormData(wishForm);
+        formData.append(
+            "_subject",
+            "A Birthday Wish from Trushnaa — PROJECT J.A.D.I."
+        );
+
+        try {
+            const response = await fetch(
+                "https://formspree.io/f/xjygorqk",
+                {
+                    method: "POST",
+                    body: formData,
+                    headers: {
+                        Accept: "application/json"
+                    }
+                }
+            );
+
+            if (!response.ok) {
+                throw new Error("The wish could not be submitted.");
+            }
+
+            wishFeedback.textContent =
+                "Your wish has reached the stars. 💜✨";
+
+            wishForm.reset();
+        } catch (error) {
+            wishFeedback.textContent =
+                "Your wish could not be sent. Please try again.";
+
+        } finally {
+            submitButton.disabled = false;
+            submitButton.innerHTML = originalButtonText;
+        }
+    });
+}
+
 console.log("PROJECT J.A.D.I. initialized successfully.");
 console.log("Access code hint: DDMM");

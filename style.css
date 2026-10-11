@@ -1048,3 +1048,8 @@ footer {
         opacity: 0;
     }
 }
+
+/* The birthday song plays automatically */
+#celebrateBtn {
+    display: none !important;
+}
