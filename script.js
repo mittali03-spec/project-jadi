@@ -263,14 +263,22 @@ puzzleForm.addEventListener("submit", (event) => {
     const enteredCode = secretCode.value.trim();
 
     if (enteredCode === "1210") {
-        puzzleFeedback.textContent = "IDENTITY VERIFIED. WELCOME HOME, JADI.";
-        puzzleFeedback.style.color = "#d8b77b";
+       
+playUnlockSound();
 
-        playUnlockSound();
+// Prepare audio during the user's button click
+getAudioContext();
 
-        setTimeout(() => {
-            showScreen("birthday");
-        }, 900);
+setTimeout(() => {
+    showScreen("birthday");
+
+    // Automatically play the birthday melody
+    playCelebrationSound();
+
+    // Automatically launch the sprinkles
+    launchConfetti();
+}, 900);
+
     } else {
         puzzleFeedback.textContent =
             "ACCESS DENIED. TRY AGAIN, ASTRONAUT. HINT: DDMM.";
