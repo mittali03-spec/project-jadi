@@ -441,17 +441,25 @@ if (wishForm && wishFeedback) {
                 }
             );
 
-            if (!response.ok) {
-                throw new Error("The wish could not be submitted.");
-            }
+           if (!response.ok) {
+    const errorData = await response.json();
+    console.error("Formspree error:", errorData);
+
+    throw new Error(
+        errorData.errors?.map(error => error.message).join(", ") ||
+        "The wish could not be submitted."
+    );
+}
 
             wishFeedback.textContent =
                 "Your wish has reached the stars. 💜✨";
 
             wishForm.reset();
-        } catch (error) {
-            wishFeedback.textContent =
-                "Your wish could not be sent. Please try again.";
+    } catch (error) {
+    console.error("Wish submission failed:", error);
+
+    wishFeedback.textContent =
+        "Your wish could not be sent: " + error.message;
 
         } finally {
             submitButton.disabled = false;
