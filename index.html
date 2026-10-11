@@ -1,0 +1,582 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#080510">
+
+    <title>PROJECT J.A.D.I. | A Universe That Knows Her</title>
+
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+    
+<link rel="icon" href="data:,">
+
+</head>
+
+<body>
+
+    <!-- COSMIC BACKGROUND -->
+    <canvas id="starfield"></canvas>
+    <div class="nebula nebula-one"></div>
+    <div class="nebula nebula-two"></div>
+    <div class="grain"></div>
+
+    <!-- MYSTERIOUS LIGHT COMPANION -->
+    <div class="guide-companion"
+         id="guideCompanion"
+         role="button"
+         tabindex="0"
+         aria-label="Click the mysterious light for a hint">
+        <div class="guide-aura"></div>
+        <div class="guide-core"></div>
+    </div>
+
+    <div class="guide-message" id="guideMessage" aria-live="polite">
+        <span class="guide-label">UNKNOWN SIGNAL</span>
+        <p id="guideText">Psst... chosen one. Follow the light.</p>
+    </div>
+
+    <!-- PORTAL TRANSITION -->
+    <div class="portal-flash" id="portalFlash"></div>
+
+    <!-- HEADER -->
+    <header class="topbar">
+        <a class="brand" href="#home">J<span>.</span>A<span>.</span>D<span>.</span>I<span>.</span></a>
+
+        <div class="classified">
+            <span class="status-dot"></span>
+            CLASSIFIED TRANSMISSION
+        </div>
+
+        <div class="top-date">12.10.2026</div>
+    </header>
+
+    <main id="home">
+
+        <!-- =====================================
+             SCREEN 1: THE OPENING
+        ====================================== -->
+        <section class="screen hero active" id="hero">
+
+            <div class="coordinates">SECTOR 12 · GALAXY UNKNOWN</div>
+
+            <div class="hero-content">
+
+                <p class="eyebrow">
+                    ✦ CLASSIFIED TRANSMISSION DETECTED ✦
+                </p>
+
+                <h1 class="found-heading">
+                    WE FOUND <span>HER.</span>
+                </h1>
+
+                <p class="subtitle">
+                    If you are reading this, you are the one chosen.
+                </p>
+
+                <!-- PORTAL -->
+                <div class="portal-wrap" id="portal">
+
+                    <div class="portal-orbit orbit-one"></div>
+                    <div class="portal-orbit orbit-two"></div>
+                    <div class="portal-orbit orbit-three"></div>
+
+                    <div class="portal">
+                        <div class="portal-core"></div>
+                        <div class="portal-symbol">✦</div>
+                    </div>
+
+                </div>
+
+                <p class="hero-description">
+                    Somewhere in this infinite universe,<br>
+                    one extraordinary human is about to be discovered.
+                </p>
+
+                <button class="primary-btn" id="startBtn" type="button">
+                    <span>ENTER THE UNKNOWN</span>
+                    <span class="button-arrow">↗</span>
+                </button>
+
+                <p class="micro-copy">
+                    HEADPHONES RECOMMENDED · SOUND IS OPTIONAL
+                </p>
+
+            </div>
+
+            <div class="side-note">
+                FILE NO. 001 — THE JADI ARCHIVE
+            </div>
+
+            <div class="scroll-note">
+                A SIGNAL IS WAITING FOR YOU ↓
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             SCREEN 2: SIGNAL DETECTED
+        ====================================== -->
+        <section class="screen" id="signal">
+
+            <div class="section-label">
+                01 / INCOMING TRANSMISSION
+            </div>
+
+            <div class="content-card">
+
+                <div class="signal-icon" id="signalIcon">⌁</div>
+
+                <p class="eyebrow">SIGNAL DETECTED</p>
+
+                <h2>
+                    Wait... we found <span>her.</span>
+                </h2>
+
+                <div class="terminal" id="terminal">
+                    <p>&gt; Searching across dimensions...</p>
+                    <p>&gt; Scanning millions of stars...</p>
+                    <p>&gt; Identity match detected.</p>
+                    <p class="terminal-highlight">
+                        &gt; SUBJECT: TRUSHNAA
+                    </p>
+                    <p>&gt; ALIAS: JADI</p>
+                    <p class="terminal-highlight">
+                        &gt; IMPORTANCE LEVEL: INFINITE
+                    </p>
+                </div>
+
+                <p class="body-copy">
+                    Not every star gets its own universe.
+                    Apparently, this one does.
+                </p>
+
+                <button class="primary-btn next-btn"
+                        type="button"
+                        data-next="memory">
+                    <span>ACCESS HER UNIVERSE</span>
+                    <span class="button-arrow">↗</span>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             SCREEN 3: THE FRIENDSHIP
+        ====================================== -->
+        <section class="screen" id="memory">
+
+            <div class="section-label">
+                02 / THE HUMAN ANOMALY
+            </div>
+
+            <div class="content-card wide-card">
+
+                <p class="eyebrow">
+                    A NOTE FROM THE UNIVERSE
+                </p>
+
+                <h2>
+                    Some people just <span>feel like home.</span>
+                </h2>
+
+                <p class="body-copy">
+                    In a universe full of random encounters, somehow,
+                    two lives crossed paths and made their own little
+                    corner of the galaxy.
+                </p>
+
+                <div class="memory-grid">
+
+                    <div class="memory-tile">
+                        <span class="tile-symbol">✧</span>
+                        <h3>THE CHAOS</h3>
+                        <p>
+                            For the laughs, the nonsense, and the moments
+                            that make absolutely no sense to anyone else.
+                        </p>
+                    </div>
+
+                    <div class="memory-tile">
+                        <span class="tile-symbol">☾</span>
+                        <h3>THE COMFORT</h3>
+                        <p>
+                            For the kind of friendship where even an
+                            ordinary day can become a favourite memory.
+                        </p>
+                    </div>
+
+                    <div class="memory-tile">
+                        <span class="tile-symbol">∞</span>
+                        <h3>THE FOREVER</h3>
+                        <p>
+                            For the memories still waiting to happen,
+                            and all the adventures that haven't begun yet.
+                        </p>
+                    </div>
+
+                </div>
+
+                <p class="small-note">
+                    These are the things no machine can measure.
+                </p>
+
+                <button class="primary-btn next-btn"
+                        type="button"
+                        data-next="archive">
+                    <span>FOLLOW THE UNKNOWN LIGHT</span>
+                    <span class="button-arrow">↗</span>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             SCREEN 4: HIDDEN PHOTO ARCHIVE
+        ====================================== -->
+ 
+        <!-- =====================================
+             SCREEN 4: HIDDEN PHOTO ARCHIVE
+        ====================================== -->
+        <section class="screen" id="archive">
+
+            <div class="section-label">
+                03 / FRAGMENTS OF FOREVER
+            </div>
+
+            <div class="content-card wide-card">
+
+                <p class="eyebrow">THE JADI ARCHIVE</p>
+
+                <h2>
+                    Every memory is a <span>little universe.</span>
+                </h2>
+
+                <p class="body-copy">
+                    Three fragments have been recovered.
+                    Click each memory to uncover its hidden message.
+                </p>
+
+                <div class="archive-grid">
+
+                    <button class="archive-card" type="button"
+                        data-memory="The little moments became the big memories. And I'd choose them all again. ♡">
+
+                        <img src="./assets/images/memory-1.jpg" alt="Our beginning">
+                        <span class="archive-number">MEMORY 01</span>
+                        <span class="archive-title">THE BEGINNING</span>
+                        <span class="archive-description">
+                            Every beautiful story starts somewhere. I'm glad ours did.
+                        </span>
+                        <span class="archive-hint">✧ Click to discover</span>
+                    </button>
+
+                    <button class="archive-card" type="button"
+                        data-memory="Our kind of chaos deserves its own galaxy. Nobody else has to understand it. ✨">
+
+                        <img src="./assets/images/memory-2.jpg" alt="Our little chaos">
+                        <span class="archive-number">MEMORY 02</span>
+                        <span class="archive-title">OUR LITTLE CHAOS</span>
+                        <span class="archive-description">
+                            The laughs, the madness, and the moments only we understand.
+                        </span>
+                        <span class="archive-hint">✧ Click to discover</span>
+                    </button>
+
+                    <button class="archive-card" type="button"
+                        data-memory="One day, we'll look back at even more memories and realise how much life we lived together. 💜">
+
+                        <img src="./assets/images/memory-3.jpg" alt="Our memories yet to come">
+                        <span class="archive-number">MEMORY 03</span>
+                        <span class="archive-title">STILL UNWRITTEN</span>
+                        <span class="archive-description">
+                            Our story isn't finished. The best memories may be ahead.
+                        </span>
+                        <span class="archive-hint">✧ Click to discover</span>
+                    </button>
+
+                </div>
+
+                <p class="archive-reveal" id="archiveReveal" aria-live="polite">
+                    Select a memory fragment to reveal its message.
+                </p>
+
+                <button class="primary-btn next-btn"
+                        type="button"
+                        data-next="puzzle">
+                    <span>OPEN THE FINAL GATE</span>
+                    <span class="button-arrow">↗</span>
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- =====================================
+             SCREEN 5: THE SECRET PUZZLE
+        ====================================== -->
+        <section class="screen" id="puzzle">
+
+            <div class="section-label">
+                04 / SECURITY CLEARANCE REQUIRED
+            </div>
+
+            <div class="content-card puzzle-card">
+
+                <div class="lock-symbol">⌑</div>
+
+                <p class="eyebrow">CLASSIFIED ACCESS</p>
+
+                <h2>
+                    Prove you're <span>Jadi.</span>
+                </h2>
+
+                <p class="body-copy">
+                    Every universe has a key.<br>
+                    Yours is hiding in plain sight.
+                </p>
+
+                <div class="riddle">
+
+                    <span class="riddle-label">THE RIDDLE</span>
+
+                    <p>
+                        I'm the day the universe celebrates you.
+                        Enter the four digits of your birthday.
+                    </p>
+
+                    <div class="riddle-hint">
+                        HINT: DDMM
+                    </div>
+
+                </div>
+
+                <form id="puzzleForm">
+
+                    <label for="secretCode">
+                        ENTER ACCESS CODE
+                    </label>
+
+                    <input
+                        id="secretCode"
+                        name="secretCode"
+                        type="password"
+                        inputmode="numeric"
+                        pattern="[0-9]{4}"
+                        maxlength="4"
+                        placeholder="••••"
+                        autocomplete="off"
+                        required
+                    >
+
+                    <button class="primary-btn" type="submit">
+                        <span>VERIFY IDENTITY</span>
+                        <span class="button-arrow">↗</span>
+                    </button>
+
+                </form>
+
+                <p class="feedback"
+                   id="puzzleFeedback"
+                   aria-live="polite"></p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             SCREEN 6: BIRTHDAY REVEAL
+        ====================================== -->
+        
+        <!-- =====================================
+             SCREEN 6: BIRTHDAY REVEAL
+        ====================================== -->
+        <section class="screen birthday-screen" id="birthday">
+
+            <div class="birthday-stars">✦　·　✧　·　✦</div>
+
+            <div class="birthday-content">
+
+                <p class="eyebrow">
+                    ACCESS GRANTED · FILE UNSEALED
+                </p>
+
+                <div class="birthday-orb">
+                    <span>✧</span>
+                </div>
+
+                <!-- THE ANGEL STORY -->
+                <div class="friendship-reveal">
+                    <p class="eyebrow">A MESSAGE FROM THE HEAVENS</p>
+
+                    <h2>
+                        The day an angel<br>
+                        <span>was born.</span>
+                    </h2>
+
+                    <p class="birthday-message">
+                        On this day, an angel named Trushnaa was born.
+                        The heavens sent her to Earth to bring light,
+                        love, laughter, and a little bit of magic.
+                    </p>
+
+                    <p class="birthday-message">
+                        And somewhere in this enormous universe,
+                        our paths crossed. Through all the stars,
+                        all the possibilities, and all the time
+                        that passed...
+                    </p>
+
+                    <p class="birthday-message final-message">
+                        WE FINALLY FOUND YOU. 💜
+                    </p>
+
+                    <p class="birthday-message">
+                        That angel is you, Jadi. Always remember
+                        how precious you are.
+                    </p>
+                </div>
+
+                <p class="birthday-kicker">
+                    THE UNIVERSE HAS ONE THING TO SAY...
+                </p>
+
+                <h2>Happy Birthday,</h2>
+
+                <h1 class="birthday-name">TRUSHNAA<span>.</span></h1>
+
+                <p class="nickname">A.K.A. MY JADI ♡</p>
+
+                <div class="gold-line"></div>
+
+                <p class="birthday-message">
+                    If I could give you one thing for your birthday,
+                    I'd give you the ability to see yourself through
+                    my eyes — just for a moment.
+                </p>
+
+                <p class="birthday-message">
+                    Maybe then you'd understand how special you are,
+                    how much happiness you bring, and why having you
+                    in my life is something I'll always be grateful for.
+                </p>
+
+                <p class="birthday-message">
+                    I hope this new chapter brings you lasting
+                    happiness, dreams that come true, adventures
+                    you've always wanted, and a million reasons to smile.
+                </p>
+
+                <p class="birthday-message final-message">
+                    No matter how big this universe gets,
+                    you'll always have a little corner in mine. 💜
+                </p>
+
+                <div class="birthday-signoff">
+                    <span>WITH LOVE, ALWAYS</span>
+                    <span class="signature">Your favourite human ♡</span>
+                </div>
+
+                <button class="primary-btn" id="celebrateBtn" type="button">
+                    <span>PLAY HAPPY BIRTHDAY ✨</span>
+                    <span class="button-arrow">♫</span>
+                </button>
+
+                <p class="wish-message" id="wishMessage" aria-live="polite">
+                    ✨ The stars are celebrating you, Jadi! ✨
+                </p>
+
+                <button class="primary-btn next-btn" type="button"
+                        data-next="wish">
+                    <span>YOUR WISH WITH THE ALMIGHTY</span>
+                    <span class="button-arrow">↗</span>
+                </button>
+
+                <button class="restart-btn" id="restartBtn" type="button">
+                    ↺ REPLAY THE EXPERIENCE
+                </button>
+
+            </div>
+
+            <div id="confettiLayer"></div>
+
+        </section>
+
+        <!-- =====================================
+             SCREEN 7: THE ALMIGHTY'S WISH
+        ====================================== -->
+        <section class="screen" id="wish">
+
+            <div class="section-label">
+                06 / A WISH FROM HIS ANGEL
+            </div>
+
+            <div class="content-card">
+
+                <p class="eyebrow">A MOMENT JUST FOR YOU</p>
+
+                <div class="birthday-orb">
+                    <span>♡</span>
+                </div>
+
+                <h2>
+                    The Almighty is listening,<br>
+                    <span>His angel.</span>
+                </h2>
+
+                <p class="body-copy">
+                    Close your eyes for a moment, Jadi.
+                    Think of the wish your heart wants most.
+                    When you're ready, write it here.
+                </p>
+
+                <form id="wishForm">
+
+                    <label for="birthdayWish">YOUR HEART'S WISH</label>
+
+                    <textarea
+                        id="birthdayWish"
+                        name="birthdayWish"
+                        rows="5"
+                        maxlength="1000"
+                        placeholder="Dear Almighty, my wish is..."
+                        required
+                    ></textarea>
+
+                    <button class="primary-btn" type="submit">
+                        <span>SEND MY WISH ✨</span>
+                        <span class="button-arrow">♡</span>
+                    </button>
+
+                </form>
+
+                <p id="wishFeedback" aria-live="polite"></p>
+
+                <p class="small-note">
+                    A LITTLE WISH, SENT WITH ALL YOUR HEART.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <span>PROJECT J.A.D.I.</span>
+        <span>MADE OF STARDUST &amp; FRIENDSHIP</span>
+        <span>ENDLESSLY, ∞</span>
+    </footer>
+
+</body>
+</html>
